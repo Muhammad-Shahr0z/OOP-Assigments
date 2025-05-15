@@ -4,22 +4,22 @@
 
 
 
-class InvalidAgeError(Exception):
-    pass 
 
-# Step 2: Function banayein jo age check kare
+class InvalidAgeError(Exception):
+    pass
+
 def check_age(age):
     if age < 18:
-        raise InvalidAgeError("Age must be at least 18 to proceed.")
+        raise InvalidAgeError("Invalid Age Must Be 18 or Above")
     else:
-        print("Access granted.")
-
-# Step 3: Try-Except se handle karein
+        print("User Granted..")
 
 try:
-    user_age = int(input("Enter your age: "))
+    user_age = int(input("Enter Your Age: "))
     check_age(user_age)
 except InvalidAgeError as e:
-    print("Invalid Age Error:", e)
-except ValueError:
-    print("Please enter a valid number.")
+    print(e)
+
+
+
+    
